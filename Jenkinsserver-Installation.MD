@@ -18,13 +18,12 @@ sudo amazon-linux-extras install java-openjdk11
 java -version
 
 _The output should be something like this,_
-```
 
+```
 java -version
 openjdk version "11.0.16" 2022-07-19 LTS
 OpenJDK Runtime Environment (Red_Hat-11.0.16.0.8-1.amzn2.0.1) (build 11.0.16+8-LTS)
 OpenJDK 64-Bit Server VM (Red_Hat-11.0.16.0.8-1.amzn2.0.1) (build 11.0.16+8-LTS, mixed mode, sharing)
-
 ```
 
 ## Install Jenkins
