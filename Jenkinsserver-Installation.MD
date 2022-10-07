@@ -61,9 +61,6 @@ http://YOUR-SERVER-PUBLIC-IP:8080
 - `Skip` Plugin Installation; _We can do it later_
 - Change admin password
   - `Admin` > `Configure` > `Password`
-- Configure `java` path
-  - `Manage Jenkins` > `Global Tool Configuration` > `JDK`  
-- Create another admin user id
 
 ### Test Jenkins Jobs
 1. Create �new item�
