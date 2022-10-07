@@ -23,16 +23,17 @@ yum install git
 
 ```
 
-## Assign shell to jenkins user
-## By default jenkins user don't have the shell
+##Assign shell to jenkins user
+##By default jenkins user don't have the shell
 
 ```sh
 cat /etc/passwd
 jenkins:x:994:992:Jenkins Automation Server:/var/lib/jenkins:/bin/false
 ```
 
-## Assign shell to jenkins user
+##Assign shell to jenkins user
 ```sh
 vi /etc/passwd
 change shell from /bin/false to /bin/bash
+jenkins:x:994:992:Jenkins Automation Server:/var/lib/jenkins:/bin/bash
 ```
