@@ -1,3 +1,6 @@
+### Helm latest version 3.10.0 having issue 
+https://github.com/helm/helm/issues/10975
+
 ### Jenkins server setup with Helm to deploy into Kubernetes cluster
 
 ## Switch to jenkins user
