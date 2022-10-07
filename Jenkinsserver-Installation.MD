@@ -39,10 +39,18 @@ systemctl start jenkins
 
 # Setup Jenkins to start at boot,
 systemctl enable jenkins
+
+# Check Jenkins status,
+systemctl status jenkins
 ```
 
 #### Accessing Jenkins
-By default jenkins runs at port `8080`, You can access jenkins at
+By default jenkins runs at port `8080`, You can access jenkins at 8080 before than check the port listening 
+
+```sh
+netstat -ntlp
+```
+
 ```sh
 http://YOUR-SERVER-PUBLIC-IP:8080
 ```
