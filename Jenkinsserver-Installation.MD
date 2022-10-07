@@ -14,9 +14,6 @@ sudo amazon-linux-extras install java-openjdk11
 
 ### Confirm Java Version
 
-```sh
-java -version
-
 _The output should be something like this,_
 ```
 java -version
