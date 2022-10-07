@@ -6,8 +6,13 @@ systemctl enable docker
 ```
 
 ## provide permissions to jenkins user in jenkins server to access docker
+
 ```sh
-  sudo groupadd docker
+  [root@# cat /etc/group | grep -i docker
+   docker:x:990:
+```
+
+```sh
   sudo usermod -aG docker jenkins
   sudo chmod 777 /var/run/docker.sock
 ```
