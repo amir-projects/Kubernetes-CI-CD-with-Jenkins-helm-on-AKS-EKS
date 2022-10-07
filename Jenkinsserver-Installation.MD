@@ -1,34 +1,30 @@
 # Jenkins server Installation
 
 ### Prerequisites 
- 1. EC2 Linux 7.x Instance
+ 1. EC2 Linux 7.x Instance upto
 
- 2. Java v1.8.x
+ 2. OpenJDK
+ https://www.jenkins.io/blog/2022/06/28/require-java-11/
 
 ## Install Java
-We will be using open java for our demo, Get latest version from http://openjdk.java.net/install/
+We will be using openjdk for our demo, Get latest version from http://openjdk.java.net/install/
 ```sh
-yum install java-1.8*
-#yum -y install java-1.8.0-openjdk
+sudo amazon-linux-extras install java-openjdk11
 ```
 
 ### Confirm Java Version
-Lets install java and set the java home
+
 ```sh
 java -version
-find /usr/lib/jvm/java-1.8* | head -n 3
-#JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64
-export JAVA_HOME
-PATH=$PATH:$JAVA_HOME
-# To set it permanently update your .bash_profile
-source ~/.bash_profile
-```
+
 _The output should be something like this,_
 ```
-[root@~]# java -version
-openjdk version "1.8.0_151"
-OpenJDK Runtime Environment (build 1.8.0_151-b12)
-OpenJDK 64-Bit Server VM (build 25.151-b12, mixed mode)
+
+java -version
+openjdk version "11.0.16" 2022-07-19 LTS
+OpenJDK Runtime Environment (Red_Hat-11.0.16.0.8-1.amzn2.0.1) (build 11.0.16+8-LTS)
+OpenJDK 64-Bit Server VM (Red_Hat-11.0.16.0.8-1.amzn2.0.1) (build 11.0.16+8-LTS, mixed mode, sharing)
+
 ```
 
 ## Install Jenkins
@@ -36,7 +32,7 @@ You can install jenkins using the rpm or by setting up the repo. We will setup t
 Get latest version of jenkins from https://pkg.jenkins.io/redhat-stable/
 ```sh
 yum -y install wget
-wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo --no-check-certificate
 rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
 yum -y install jenkins
 ```
