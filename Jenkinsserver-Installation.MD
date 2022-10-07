@@ -5,6 +5,9 @@
 
  2. OpenJDK
  https://www.jenkins.io/blog/2022/06/28/require-java-11/
+ 
+ 3. Java environment set
+ https://bhargavamin.com/how-to-do/setting-up-java-environment-variable-on-ec2/
 
 ## Install Java
 We will be using openjdk for our demo, Get latest version from http://openjdk.java.net/install/
