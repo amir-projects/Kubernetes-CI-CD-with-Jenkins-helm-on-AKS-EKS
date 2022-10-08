@@ -1,0 +1,8 @@
+CI PART 
+
+- Jenkins clone the git repo
+- trigger the build 
+- Once build is completed it is create an artificate
+- Artifcate copied in the docker directory
+- Docker has been created an image
+- image has been store in docker registry 
