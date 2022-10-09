@@ -6,14 +6,14 @@
  apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: petclinic-memory-hpa
+  name: ekscluster-memory-hpa
 spec:
   maxReplicas: 5
   minReplicas: 1
   scaleTargetRef:
     apiVersion: extensions/v1beta1
     kind: Deployment
-    name: petclinic-deployment
+    name: ekscluster-deployment
   metrics:
   - type: Resource
     resource:
