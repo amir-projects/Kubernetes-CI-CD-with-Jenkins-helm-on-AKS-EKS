@@ -16,14 +16,14 @@
   apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: petclicnic-hpa
+  name: ekscluster-hpa
 spec:
   maxReplicas: 5
   minReplicas: 1
   scaleTargetRef:
     apiVersion: extensions/v1beta1
     kind: Deployment
-    name: petclinic-deployment
+    name: ekscluster-deployment
   targetCPUUtilizationPercentage: 50
   ```
 ## Install siege package on K8 Master
